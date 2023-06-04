@@ -1,0 +1,168 @@
+:root {
+  --rojo: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --naranja: hsl(34, 97%, 64%);
+  --azul: hsl(212, 86%, 64%);
+  --azulOscuro: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --LightGray: hsl(0, 0%, 98%);
+  --fuentePrincipal: "Poppins", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Globales */
+
+body {
+  background-color: var(--LightGray);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* Textos y Parrafos */
+
+h1,
+h2,
+h3,
+p {
+  font-family: var(--fuentePrincipal);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--azulOscuro);
+}
+
+p {
+  color: var(--GrayishBlue);
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+}
+
+.textoPrincipal {
+  text-align: center;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.titulo1 {
+  font-weight: 200;
+  font-size: 2.5rem;
+}
+
+.titulo2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.texto-caja {
+  text-align: start;
+}
+
+.parrafo-caja {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+.icono {
+  text-align: right;
+}
+
+/* Contenedor y Caja */
+
+.contenedor {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 2rem;
+  width: 80%;
+  margin-bottom: 6rem;
+}
+
+.caja {
+  background-color: white;
+  height: 95%;
+  border-radius: 4%;
+  box-shadow: 0 15px 15px hsl(234, 12%, 34%, 0.2);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cyan {
+  border-top: 4px solid var(--cyan);
+}
+
+.roja {
+  border-top: 4px solid var(--rojo);
+}
+
+.naranja {
+  border-top: 4px solid var(--naranja);
+}
+
+.azul {
+  border-top: 4px solid var(--azul);
+}
+
+@media (min-width: 1050px) {
+  html {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .parrafo2-separado::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .contenedor {
+    width: 75%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cyan {
+    grid-row: 2 / 4;
+  }
+
+  .roja {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .naranja {
+    grid-row: 3 / 5;
+    grid-column: 2 / 3;
+  }
+
+  .azul {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+}
