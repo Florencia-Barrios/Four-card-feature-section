@@ -100,8 +100,8 @@ h3 {
 
 .caja {
   background-color: white;
-  height: 95%;
-  border-radius: 4%;
+  height: 100%;
+  border-radius: 8%;
   box-shadow: 0 15px 15px hsl(234, 12%, 34%, 0.2);
   padding: 2.5rem;
   display: flex;
